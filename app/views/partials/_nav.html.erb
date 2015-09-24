@@ -1,0 +1,32 @@
+<header>
+	<nav>
+		<li class="boton"><i class="fa fa-bars"></i></li>
+		<ul>
+			<li><%= link_to "Mi Tienda", root_path  %></li>
+			<li><%= link_to "Vender",new_producto_path %></li>
+			<li><%= link_to "Departamentos", departamentos_path %></li>
+			
+
+			<% if usuario_signed_in? %>
+			
+			<%if  current_usuario.tipo_de_usuario == 3 %>
+			<li><%= link_to "Dashboard", dashboard_path %></li>
+			<% end %>
+			<li><%= link_to "Mi Cuenta",usuario_session_path %></li>
+			<li><%= link_to "Cerrar Sesión", destroy_usuario_session_path, method: "delete" 
+				%></li>
+
+
+				<% else %>
+				<li><%= link_to "Crear Cuenta",new_usuario_registration_path %></li>
+				<li><%= link_to "Iniciar Sesión",usuario_session_path %></li>
+				<% end %>
+
+
+
+				<li class="last"></li>
+			</ul>
+		</nav>
+	</header>
+
+			

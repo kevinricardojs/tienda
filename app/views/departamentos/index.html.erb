@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Departamentos</h1>
+    <% @departamentos.each do |departamento| %>
+        <p><%= link_to departamento.nombre,departamento %></p>
+        <p><%= departamento.descripcion %></p>
+    <% end %>
+
+<br>
+
+

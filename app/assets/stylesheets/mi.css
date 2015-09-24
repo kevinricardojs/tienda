@@ -1,0 +1,58 @@
+body{
+	margin:0px 20px 0px 20px;
+
+}
+body{
+	background-image: url('../index.svg');
+	background-size: 100% auto;
+	background-repeat: repeat;
+}
+nav{
+	width: 100%;
+}
+ul{
+	padding: 0;
+	margin: 0;
+}
+
+li{
+
+	background: rgba(0,0,0,0.5);
+	list-style: none;
+	text-align: center;
+	line-height: 3;
+	border-bottom:4px solid  rgba(0,0,0,0);
+	 transition-duration: 0.5s;
+	 transition-timing-function: linear;
+}
+		ul{
+		display: flex;
+			}
+		li{
+			flex:auto;
+		}
+		.last , .boton{
+			display: none;
+		}
+
+}
+.field{
+	display: block;
+}
+.field label, .field input{
+	display: block;
+}
+nav a{
+	color: white;
+	text-decoration: none;
+}
+.departamentos{
+	width: 45%;
+	display: inline-block;
+	background: silver;
+}
+.usuarios{
+	width: 45%;
+	display: inline-block;
+	background: gray;
+}

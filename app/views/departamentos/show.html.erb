@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @departamento.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @departamento.descripcion %>
+</p>
+
+	
+<% @productos.each do |producto| %>
+	<p><%= producto.nombre %></p>
+	<% end %>
+	
+
+
+

@@ -1,0 +1,53 @@
+<%= form_for(@producto) do |f| %>
+<% if @producto.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@producto.errors.count, "error") %> prohibited this producto from being saved:</h2>
+
+  <ul>
+    <% @producto.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<div class="field">
+  <%=  f.label :nombre%>
+  <%=  f.text_field :nombre%>
+</div>
+<div class="field">
+  <%=  f.label :desc_c , "Descripcion Corta"%>
+  <%=  f.text_field :desc_c%>
+</div><div class="field">
+
+<%=  f.label :desc_l , "Descripcion Larga"%>
+<%=  f.text_area :desc_l %>
+</div>
+<div class="field">
+
+  <%=  f.label :estado%>
+  <%=  f.text_field :estado%>
+</div>
+<div class="field">
+
+  <%=  f.label :precio%>
+  <%=  f.text_field :precio%>
+</div>
+
+
+
+<div class="field">
+<%@departamentos.each do |departamento| %>
+<p>  <%= departamento.nombre %></p>
+  <% departamento.id = departamento.id.to_i %>
+<%= f.radio_button(:departamento_id,departamento.id) %>
+
+
+  <% end %>
+  </div>
+
+
+
+<div class="actions">
+  <%= f.submit %>
+</div>
+<% end %>

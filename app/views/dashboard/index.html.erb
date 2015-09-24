@@ -1,0 +1,20 @@
+<h1>Administracion</h1>
+
+<div class="departamentos">
+<h3>Todos los Departamentos</h3>
+	<% @departamentos.each do |departamento| %>
+
+	<p><%= link_to "#{departamento.nombre}", departamento %></p>
+	<p><%= departamento.descripcion %></p>
+
+
+	<% end %>
+		<li><%= link_to 'Nuevo Departamento', new_departamento_path %></li>
+</div>
+<div class="usuarios">
+<h3>Todos los Usuarios</h3>
+	<% @usuarios.each do |usuario| %>
+
+	<p><%= usuario.email %></p>
+	<% end %>
+</div>

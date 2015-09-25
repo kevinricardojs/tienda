@@ -7,7 +7,9 @@ body{
 	font-weight: bold;
 
 }
-
+a{
+	text-decoration: none;
+}
 nav{
 	width: 100%;
 	font-family: arial;
@@ -225,22 +227,6 @@ negro #404040
 	}
 }
 
-
-
-
-/*
-.departamentos{
-	width: 45%;
-	display: inline-block;
-	background: silver;
-}
-.usuarios{
-	width: 45%;
-	display: inline-block;
-	background: gray;
-}
-
-*/
 .dashboard{
 	width: 100%;
 	display: flex;
@@ -248,7 +234,8 @@ negro #404040
 	justify-content:space-between;
 }
 .dashboard-e{
-	width: 40%;
+	width: 45%;
+	height: auto;
 	margin-left: 10px;
 	flex: auto;
 	border: solid 1px;
@@ -256,3 +243,11 @@ negro #404040
 	margin-top: 10px;
 	position: relative;
 }
+.elemento-d-dep , .elemento-d-user{
+	width: 90%;	
+	margin-left: 5%;
+}
+.center{
+	text-align: center;
+}
+

@@ -11,25 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150924165239) do
+ActiveRecord::Schema.define(version: 20150925191519) do
 
   create_table "departamentos", force: :cascade do |t|
-    t.string   "nombre",      limit: 255
-    t.text     "descripcion", limit: 65535
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.string   "nombre",              limit: 255
+    t.text     "descripcion",         limit: 65535
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.string   "imagen_file_name",    limit: 255
+    t.string   "imagen_content_type", limit: 255
+    t.integer  "imagen_file_size",    limit: 4
+    t.datetime "imagen_updated_at"
   end
 
   create_table "productos", force: :cascade do |t|
-    t.string   "nombre",          limit: 255,   null: false
-    t.string   "desc_c",          limit: 255,   null: false
-    t.text     "desc_l",          limit: 65535, null: false
-    t.string   "estado",          limit: 255,   null: false
-    t.float    "precio",          limit: 24,    null: false
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
-    t.integer  "usuario_id",      limit: 4
-    t.integer  "departamento_id", limit: 4
+    t.string   "nombre",              limit: 255,   null: false
+    t.string   "desc_c",              limit: 255,   null: false
+    t.text     "desc_l",              limit: 65535, null: false
+    t.string   "estado",              limit: 255,   null: false
+    t.float    "precio",              limit: 24,    null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.integer  "usuario_id",          limit: 4
+    t.integer  "departamento_id",     limit: 4
+    t.string   "imagen_file_name",    limit: 255
+    t.string   "imagen_content_type", limit: 255
+    t.integer  "imagen_file_size",    limit: 4
+    t.datetime "imagen_updated_at"
   end
 
   add_index "productos", ["departamento_id"], name: "index_productos_on_departamento_id", using: :btree

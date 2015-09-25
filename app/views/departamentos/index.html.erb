@@ -2,7 +2,7 @@
 <div class="index-dep">
 	<% @departamentos.each do |departamento| %>
 	<div class="elemento">
-	<img src="img/musica.jpg" alt="imagen">
+	<%= image_tag departamento.imagen.url(:grande) %>
 		<div class="vinculo">
 		
 			<%= link_to departamento.nombre,departamento %>

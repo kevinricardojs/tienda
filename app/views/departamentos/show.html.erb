@@ -4,6 +4,8 @@
 <p><b>Descripción: </b></p>
 <p> <%= @departamento.descripcion %></p>
 
+<%= image_tag @departamento.imagen.url(:media) %>
+
 <div class="index-dep">
 	<% @productos.each do |producto| %>
 	<div class="elemento">

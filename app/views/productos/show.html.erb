@@ -1,4 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_producto_path(@producto) %> |
-<%= link_to 'Back', productos_path %>
+<h2><%= @producto.nombre %></h2>
+<p><%= @producto.desc_c %></p>
+<p><%= @producto.desc_l %></p>
+<p><%= @producto.estado %></p>
+<p>Q<%= @producto.precio %></p>
+

@@ -1,20 +1,16 @@
 <p id="notice"><%= notice %></p>
+<h3><%= @departamento.nombre %></h3>
 
-<p>
-  <strong>Nombre:</strong>
-  <%= @departamento.nombre %>
-</p>
+<p><b>Descripción: </b></p>
+<p> <%= @departamento.descripcion %></p>
 
-<p>
-  <strong>Descripcion:</strong>
-  <%= @departamento.descripcion %>
-</p>
-
-	
-<% @productos.each do |producto| %>
-	<p><%= producto.nombre %></p>
+<div class="index-dep">
+	<% @productos.each do |producto| %>
+	<div class="elemento">
+		<img src="img/musica.jpg" alt="imagen">
+		<div class="vinculo">
+			<%= link_to producto.nombre,producto %>
+			<p><%= producto.desc_c %></p>
+		</div>
+	</div>	
 	<% end %>
-	
-
-
-

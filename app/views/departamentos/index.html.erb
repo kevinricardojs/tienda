@@ -1,11 +1,17 @@
 <p id="notice"><%= notice %></p>
+<div class="index-dep">
+	<% @departamentos.each do |departamento| %>
+	<div class="elemento">
+	<img src="img/musica.jpg" alt="imagen">
+		<div class="vinculo">
+		
+			<%= link_to departamento.nombre,departamento %>
+		</div>	
 
-<h1>Listing Departamentos</h1>
-    <% @departamentos.each do |departamento| %>
-        <p><%= link_to departamento.nombre,departamento %></p>
-        <p><%= departamento.descripcion %></p>
-    <% end %>
+		
+	</div>
+	<% end %>
+</div>
 
-<br>
 
 

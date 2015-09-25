@@ -3,9 +3,9 @@ class ProductosController < ApplicationController
 
   # GET /productos
   # GET /productos.json
-  def index
-    @productos = Producto.all
-  end
+  #def index
+    #@productos = Producto.all
+  #end
 
   # GET /productos/1
   # GET /productos/1.json

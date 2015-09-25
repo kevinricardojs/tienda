@@ -1,20 +1,21 @@
 <h1>Administracion</h1>
-
-<div class="departamentos">
+<div class="dashboard">
+<div class="dashboard-e">
 <h3>Todos los Departamentos</h3>
 	<% @departamentos.each do |departamento| %>
 
-	<p><%= link_to "#{departamento.nombre}", departamento %></p>
+	<%= link_to "#{departamento.nombre}", departamento %>
 	<p><%= departamento.descripcion %></p>
 
 
 	<% end %>
 		<li><%= link_to 'Nuevo Departamento', new_departamento_path %></li>
 </div>
-<div class="usuarios">
+<div class="dashboard-e">
 <h3>Todos los Usuarios</h3>
 	<% @usuarios.each do |usuario| %>
-
+	<h4>Correo</h4>
 	<p><%= usuario.email %></p>
 	<% end %>
+</div>
 </div>

@@ -1,11 +1,14 @@
-<p id="notice"><%= notice %></p>
-<h3><%= @departamento.nombre %></h3>
+<div class="show-dep borde-minimo">
+	<div class="cristal-negro borde-minimo">
+	<div class="contenido">
+		
+		<h3><%= @departamento.nombre %></h3>
 
-<p><b>Descripción: </b></p>
-<p> <%= @departamento.descripcion %></p>
-
-<%= image_tag @departamento.imagen.url(:media) %>
-
+		<p><b>Descripción: </b></p>
+		<p> <%= @departamento.descripcion %></p>
+	</div>
+	</div>
+</div>
 <div class="index-dep">
 	<% @productos.each do |producto| %>
 	<div class="elemento">
@@ -16,3 +19,23 @@
 		</div>
 	</div>	
 	<% end %>
+
+
+	<style>
+		.show-dep{
+			background-image:  url('<%= @departamento.imagen.url(:grande) %>');
+			height: 315px;
+		}	
+
+		@media (max-width: 780px){
+			.show-dep{
+				height: 100%;
+			}
+		}
+		@media (max-width: 640px){
+			.show-dep{
+				background-image: url('<%= @departamento.imagen.url(:media) %>');
+				height:100%;
+			}	
+		}
+	</style>

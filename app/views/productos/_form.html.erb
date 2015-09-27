@@ -43,10 +43,11 @@
 <div class="field-c">
 <h4>A que departamento pertenece</h4>
   <%@departamentos.each do |departamento| %>
-  <p class="categorias">  <%= departamento.nombre %></p>
-  
+  <div class="categorias">
   <%= f.radio_button(:departamento_id,departamento.id) %>
-
+  <%= image_tag departamento.imagen.url(:mini) %>
+  <p ><%= departamento.nombre %></p>
+</div>
 
   <% end %>
 </div>

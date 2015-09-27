@@ -1,12 +1,12 @@
-<p id="notice"><%= notice %></p>
 <div class="index-dep">
 	<% @departamentos.each do |departamento| %>
 	<div class="elemento">
 	<%= image_tag departamento.imagen.url(:grande) %>
 		<div class="vinculo">
-		
+		<div class="cristal-negro">
 			<%= link_to departamento.nombre,departamento %>
 		</div>	
+		</div>
 
 		
 	</div>

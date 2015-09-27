@@ -143,8 +143,15 @@ negro #404040
 	width: 50%;
 	margin-left: 25%;
 }
-.field-c .categorias,input{
+.field-c {
+	display: block;
+}
+.field-c p, .field-c input{
 	display: inline-block;
+	margin-left: 5px;
+}
+.field-c img{
+	border-radius:5%;
 }
 .actions input{
 	margin-top: 10px;
@@ -250,4 +257,23 @@ negro #404040
 .center{
 	text-align: center;
 }
+.cristal-negro{
+	background: rgba(0,0,0,0.3);
+	width: 100%;
+	height: 100%;
+}
+.contenido{
+	padding: 2%;
+	color: #EEEEEE;
+}
 
+/*DEsplegar departamento*/
+.show-dep{
+	width: 100%;
+}
+.show-dep{
+	background-size:  100% 100%;
+}
+.borde-minimo{
+	border-radius: 2%;
+}

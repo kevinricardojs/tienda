@@ -135,7 +135,7 @@ negro #404040
 
 }
 .field input:focus, .field textarea:focus{
-	border: solid 3px #00C3B6;4
+	border: solid 3px #00C3B6;
 }
 .field textarea{
 	width: 100%;

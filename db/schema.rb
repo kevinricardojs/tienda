@@ -57,8 +57,8 @@ ActiveRecord::Schema.define(version: 20151005220344) do
     t.datetime "created_at",                                         null: false
     t.datetime "updated_at",                                         null: false
     t.integer  "tipo_de_usuario",        limit: 4,   default: 1
-    t.string   "nombre",                 limit: 255
-    t.string   "user_name",              limit: 255
+    t.string   "nombre",                 limit: 255,                 null: false
+    t.string   "user_name",              limit: 255,                 null: false
     t.boolean  "mujer",                              default: false
     t.boolean  "hombre",                             default: false
   end

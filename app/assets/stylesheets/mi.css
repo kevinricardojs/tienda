@@ -1,0 +1,281 @@
+body{
+	margin:0px 0px 0px 0px;
+	font-family: 'Roboto Condensed', sans-serif;
+
+}
+/*navegacion*/
+.logo{
+	font-weight: bold;
+	color:#00C3B6;
+
+}
+a{
+	text-decoration: none;
+}
+nav{
+	width: 100%;
+	font-weight: 300;
+
+}
+ul{
+	padding-left: 0px;
+	margin-left: 0px;
+}
+
+li{
+	list-style: none;
+	text-align: center;
+	line-height: 5;
+	border-bottom:4px solid  rgba(0,0,0,0);
+	transition-duration: 0.5s;
+	transition-timing-function: linear;
+}
+li:hover{
+	border-bottom:4px solid #113A52;
+}
+@media(min-width: 641px){
+	ul{
+		display: flex;
+	}
+	li{
+		flex:auto;
+	}
+	.last , .boton{
+		display: none;
+	}
+
+}
+
+nav a{
+	color: #404040;
+	text-decoration: none;
+}
+nav a:hover{
+	color:#00C3B6;
+}
+@media(max-width:641px ){
+	.boton{
+		text-align: left;
+		padding-left: 10px;
+		background: rgba(17,58,82, 0.8);
+		width: 100%;
+		position: fixed;
+		top: 0px;
+		color: #FFFDF5;
+		z-index: 11;
+		line-height: 3; 
+		border-bottom: solid #113A52 2px;
+	}
+	.last{
+		border-top: 1px rgba(255,255,255,0.8) solid;
+		background: rgba(0,0,0,0.6);
+		height: 800px;
+	}
+	li{
+		display: block;
+		text-align: right;
+		padding-right: 20px;
+		border-bottom: 1px solid #404040;
+
+		
+	}
+	ul{width: 100%;
+		position: fixed;
+		left: -100%;
+		z-index: 10;
+		margin-top: 1.5em;
+		background: rgba(17,58,82, 0.8);
+	}
+	ul a{
+		color: #FFFDF5
+	}
+		.content-principal{
+			margin-top: 25px;
+			position: relative;
+		}
+
+	}
+/*
+azul #113A52
+celest1 #00C3B6
+blanco
+gris #EEEEEE
+negro #404040
+
+
+*/
+
+
+/*navegacion*/
+/*caja principal*/
+
+.content-principal{
+	
+	width: 90%;
+	margin-left: 5%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+
+}
+/*Formularios*/
+.field{
+	display: block;
+}
+.field label, .field input ,textarea{
+	display: block;
+	margin-top: 10px;
+}
+.field label{
+	
+}
+
+.field input{
+	width: 100%;
+	height: 25px;
+
+}
+.field input:focus, .field textarea:focus{
+	border: solid 3px #00C3B6;
+}
+.field textarea{
+	width: 100%;
+	height: 100px;
+}
+.formulario{
+	width: 50%;
+	margin-left: 25%;
+}
+.field-c {
+	display: block;
+}
+.field-c p, .field-c input{
+	display: inline-block;
+	margin-left: 5px;
+}
+.field-c img{
+	border-radius:5%;
+}
+.actions input{
+	margin-top: 10px;
+	height: 40px;
+	vertical-align: middle;
+	width: 200px;
+	padding: 10px;
+	background: #113A52;
+	color: white;
+	border: none;
+	border-bottom: solid 2px silver;
+
+
+}
+@media (max-width: 641px){
+	.formulario{
+		width: 90%;
+		margin-left: 5%;
+	}
+}
+
+/**/
+/*Departamentos*/
+.index-dep{
+	width: 100%;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+.elemento{
+	width: 20%;
+	height: 200px;
+	margin-left: 10px;
+	flex: auto;
+	border: solid 1px;
+	margin-right: 10px;
+	margin-top: 10px;
+	position: relative;
+}
+.elemento img{
+	width: 100%;
+	height: 100%;
+}
+.elemento .vinculo{
+	width: 100%;
+	height: auto;
+	margin-top: -4px;
+	text-align: center;
+	background: none;
+	position: absolute;
+	bottom: 0px;
+	transition-duration: 0.3s;
+	transition-timing-function: linear;
+}
+.elemento a{
+	text-decoration: none;
+	color: black; 
+	line-height: 2.2;
+	transition-duration: 0.5s;
+	transition-timing-function: linear;
+}
+.elemento:hover .vinculo{
+	background: rgba(0,0,0,0.5);
+
+}
+.elemento:hover a{
+	padding-top: 10px;
+	color: #EEEEEE;
+}
+/*--------------------------*/
+
+@media(max-width:720px ){
+	.elemento{
+		width: 35%;
+	}
+}
+@media(max-width:320px ){
+	.elemento{
+		width: 100%;
+	}
+}
+
+.dashboard{
+	width: 100%;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+.dashboard-e{
+	width: 45%;
+	height: auto;
+	margin-left: 10px;
+	flex: auto;
+	border: solid 1px;
+	margin-right: 10px;
+	margin-top: 10px;
+	position: relative;
+}
+.elemento-d-dep , .elemento-d-user{
+	width: 90%;	
+	margin-left: 5%;
+}
+.center{
+	text-align: center;
+}
+.cristal-negro{
+	background: rgba(0,0,0,0.3);
+	width: 100%;
+	height: 100%;
+}
+.contenido{
+	padding: 2%;
+	color: #EEEEEE;
+}
+
+/*DEsplegar departamento*/
+.show-dep{
+	width: 100%;
+}
+.show-dep{
+	background-size:  100% 100%;
+}
+.borde-minimo{
+	border-radius: 2%;
+}

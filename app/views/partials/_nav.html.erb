@@ -1,0 +1,29 @@
+<header>
+
+	<nav>
+		<li class="boton"><i class="fa fa-menu"></i>menu</li>		
+		<ul>
+			<li><%= link_to "Compras Facilito", root_path , class:"logo home-a" %></li>
+			<li ><%= link_to "Vender",new_producto_path %></li>
+			<li><%= link_to "Departamentos", departamentos_path, class:"departamentos-a" %></li>
+
+
+			<% if usuario_signed_in? %>
+
+			<%if  current_usuario.tipo_de_usuario == 3 %>
+			<li><%= link_to "Dashboard", dashboard_path , class:"dashboard-a"%></li>
+			<% end %>
+			<li><%= link_to "Mi Cuenta",micuenta_path %></li>
+			<li><%= link_to "Cerrar Sesión", destroy_usuario_session_path, method: "delete" 
+				%></li>
+
+
+				<% else %>
+				<li><%= link_to "Crear Cuenta",new_usuario_registration_path, class:"crear-a"%></li>
+				<li><%= link_to "Iniciar Sesión",usuario_session_path, class:"iniciar-a" %></li>
+				<% end %>
+				<li class="last"></li>
+			</ul>
+		</nav>
+	</header>
+

@@ -1,0 +1,45 @@
+<div class="show-dep borde-minimo">
+	<div class="cristal-negro borde-minimo">
+	<div class="contenido">
+		
+		<h3><%= @departamento.nombre %></h3>
+
+		<p><b>Descripción: </b></p>
+		<p> <%= @departamento.descripcion %></p>
+	</div>
+	</div>
+</div>
+<div class="index-dep">
+	<% @productos.each do |producto| %>
+	<div class="elemento">
+		<img src="img/musica.jpg" alt="imagen">
+		<div class="vinculo">
+			<%= link_to producto.nombre, producto %>
+			<p><%= producto.desc_c %></p>
+		</div>
+	</div>	
+	<% end %>
+
+
+	<style>
+		.show-dep{
+			background-image:  url('<%= @departamento.imagen.url(:grande) %>');
+			height: 315px;
+
+		}	
+		h3{
+			font-size: 25px;
+		}
+
+		@media (max-width: 780px){
+			.show-dep{
+				height: 100%;
+			}
+		}
+		@media (max-width: 640px){
+			.show-dep{
+				background-image: url('<%= @departamento.imagen.url(:media) %>');
+				height:100%;
+			}	
+		}
+	</style>

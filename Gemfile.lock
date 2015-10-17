@@ -38,10 +38,7 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.3)
     bcrypt (3.1.10)
-<<<<<<< HEAD
     bcrypt (3.1.10-x86-mingw32)
-=======
->>>>>>> origin/master
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -88,16 +85,11 @@ GEM
     minitest (5.8.0)
     multi_json (1.11.2)
     mysql2 (0.3.19)
-<<<<<<< HEAD
     mysql2 (0.3.19-x86-mingw32)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     nokogiri (1.6.6.2-x86-mingw32)
       mini_portile (~> 0.6.0)
-=======
-    nokogiri (1.6.6.2)
-      mini_portile (~> 0.6.0)
->>>>>>> origin/master
     orm_adapter (0.5.0)
     paperclip (4.3.1)
       activemodel (>= 3.2.0)
@@ -106,10 +98,7 @@ GEM
       mime-types
       mimemagic (= 0.3.0)
     pg (0.18.3)
-<<<<<<< HEAD
     pg (0.18.3-x86-mingw32)
-=======
->>>>>>> origin/master
     puma (2.14.0)
     rack (1.6.4)
     rack-test (0.6.3)
@@ -169,11 +158,8 @@ GEM
     tilt (2.0.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-<<<<<<< HEAD
-    tzinfo-data (1.2015.6)
+    tzinfo-data (1.2015.7)
       tzinfo (>= 1.0.0)
-=======
->>>>>>> origin/master
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
@@ -187,10 +173,7 @@ GEM
 
 PLATFORMS
   ruby
-<<<<<<< HEAD
   x86-mingw32
-=======
->>>>>>> origin/master
 
 DEPENDENCIES
   byebug
@@ -207,14 +190,6 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
-<<<<<<< HEAD
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
-=======
-  uglifier (>= 1.3.0)
-  web-console (~> 2.0)
-
-BUNDLED WITH
-   1.10.6
->>>>>>> origin/master

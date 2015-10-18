@@ -1,9 +1,9 @@
 <% if usuario_signed_in? 
-	 @nombre = current_usuario.email.split(/@/)[0]	
+	 @nombre = current_usuario.user_name
 	else
 		@nombre = "Usuario"
 	end
  %>
 
-<h1>Bienvenido <%= "#{@nombre}" %></h1>
+<h2>Bienvenido <%= "#{@nombre}" %></h2>
 

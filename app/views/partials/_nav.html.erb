@@ -13,7 +13,7 @@
 			<%if  current_usuario.tipo_de_usuario == 3 %>
 			<li><%= link_to "Dashboard", dashboard_path , class:"dashboard-a"%></li>
 			<% end %>
-			<li><%= link_to "Mi Cuenta",micuenta_path %></li>
+			<li><%= link_to "Mi Cuenta",edit_usuario_registration_path %></li>
 			<li><%= link_to "Cerrar Sesión", destroy_usuario_session_path, method: "delete" 
 				%></li>
 

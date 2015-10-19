@@ -1,51 +1,51 @@
 <div class="cuenta">
 	<h3>Perfil <%=current_usuario.nombre%></h3>
 
-<div class="contenedor">
-	<div class="img-perfil">
-	<img src="img/foto.jpg" alt="mishi">
-</div>
-<div class="objetos">
-	<div class="campo">
-	<h3>Nombre de Usuario</h3>
-	<p><%= current_usuario.user_name%></p>
-</div>
-<div class="campo">
-	<h3>Mi nombre</h3>
-<% if  current_usuario.nombre == "" %>
-<p>Pendiente de ingresar</p>
-<%else%>
-<p><%= current_usuario.nombre %></p>
-<%end%>
-</div>
+	<div class="contenedor">
+		<div class="img-perfil">
+			<img src="img/foto.jpg" alt="mishi">
+		</div>
+		<div class="objetos">
+			<div class="campo">
+				<h3>Nombre de Usuario</h3>
+				<p><%= current_usuario.user_name%></p>
+			</div>
+			<div class="campo">
+				<h3>Mi nombre</h3>
+				<% if  current_usuario.nombre == "" %>
+				<p>Pendiente de ingresar</p>
+				<%else%>
+				<p><%= current_usuario.nombre %></p>
+				<%end%>
+			</div>
 
-<div class="campo">
-	<h3>Mi Dirección</h3>
-<% if  current_usuario.direccion == nil %>
-<p>Pendiente de ingresar</p>
-<%else%>
-<p><%= current_usuario.direccion %></p>
-<%end%>
+			<div class="campo">
+				<h3>Mi Dirección</h3>
+				<% if  current_usuario.direccion == nil %>
+				<p>Pendiente de ingresar</p>
+				<%else%>
+				<p><%= current_usuario.direccion %></p>
+				<%end%>
 
-</div>
-<div class="campo">
-	<h3>Mi Correo</h3>
-<p><%= current_usuario.email%></p>
-</div>
+			</div>
+			<div class="campo">
+				<h3>Mi Correo</h3>
+				<p><%= current_usuario.email%></p>
+			</div>
 
-<div class="campo">
-	<h3>Mi sexo</h3>
-<% if  current_usuario.sexo == false %>
-<p>Masculino</p>
-<%else%>
-<p>Femenino</p>
-<%end%>
-</div>
+			<div class="campo">
+				<h3>Mi sexo</h3>
+				<% if  current_usuario.sexo == false %>
+				<p>Masculino</p>
+				<%else%>
+				<p>Femenino</p>
+				<%end%>
+			</div>
 
 
 
-</div>
-</div>	
+		</div>
+	</div>	
 
-<%= link_to "Editar mi cuenta" , edit_usuario_registration_path , class:"shared-link"  %>
+	<%= link_to "Editar mi cuenta" , 	 , class:"shared-link"  %>
 </div>

@@ -137,6 +137,7 @@ negro #404040
 	border-radius:5%;
 }
 .actions input{
+		box-shadow: 0px 3px 4px gray;
 	margin-top: 10px;
 	height: 40px;
 	vertical-align: middle;
@@ -145,7 +146,6 @@ negro #404040
 	background: #113A52;
 	color: white;
 	border: none;
-	border-bottom: solid 2px silver;
 
 
 }
@@ -268,6 +268,7 @@ negro #404040
 
 /*Vistas devise usuarios*/
 .shared-link{
+	box-shadow: 0px 3px 4px gray;
 	color: white;	
 	margin-top: 10px;
 	background: #00C3B6;
@@ -302,6 +303,8 @@ input,textarea{
 	margin-left: auto !important;
 	margin-right: auto !important;
 }
+
+
 .cuenta{
 	width: 78%;
 	margin-left: 5%;
@@ -323,7 +326,6 @@ input,textarea{
 .img-perfil{
 	max-width: 45%;
 	display: inline-block;
-	box-shadow: 0px 2px 5px gray;
 	flex: auto;
 }
 .img-perfil img{
@@ -331,7 +333,7 @@ input,textarea{
 	height: 100%;
 }
 .objetos{
-	margin-left: 5px;
+	margin-left: 1%;
 	width: 45%;
 	flex: auto;
 	display: flex;
@@ -344,23 +346,43 @@ input,textarea{
 
 
 }
-.campo h3,.campo p{
-	display: block;
+.campo label, .campo input, .campo select{
 	position: relative;
 }
-.campo p{
-	left:10%;
+.campo label{
+	top: 0;
+	display: block;
+}
+.campo input, .campo select{
+	width: 70%;
+	padding-left: 0px;
+	left:7%;
+	top:10%;
 	font-weight: 300;
 	text-decoration: left;
 }
 .campo{
 	width: 98%;
 	flex:auto;
-	border-bottom: dashed 1px silver;
-	padding-left: 5px;
+	padding-top: 1%;
+	border-bottom: dotted 1px silver;
+	padding-left: 2%;
 	background: #FAFAFA;
 }
+.shadow-box{
+	box-shadow: 0px 3px 4px gray;
+}
+.cancelar{
+	width:100%;
+	text-align: center;
+}
+.btn-red{
+	background: tomato;
+	padding: 10px;
+	border: none;
+	border-radius:5px;
+	color: white;
+}
+input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus{
 
-
-
-
+}

@@ -1,63 +1,68 @@
-<div class="cuenta">
-  <h2>Editar mi cuenta </h2>
+<div class="cuenta shadow-box">
+  <h2 class="center">Editar mi cuenta </h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
-  
-  <div class="field campo">
-    <%= f.label :nombre %>
-    <%= f.text_field :nombre%>
-  </div>
-  <div class="field campo">
-    <%= f.label :user_name,"Nombre de Usuario" %>
-    <%= f.text_field :user_name, autofocus: true %>
-  </div>
-  <div class="field campo">
-    <%= f.label :email,"Correo electronico" %>
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-<div class="field campo">
-  <label for="activar">Cambiar Sexo</label>
-  <input type="checkbox" id="activar-sexo">
-</div>
-  <div class="field campo">
-    <%= f.label :sexo ,"Sexo"%>
-    <%= f.select(:sexo) do %>
-      <% [['Masculino', 0], ['Femenino', 1]].each do |sexo| %>
-    <%= content_tag(:option, sexo.first, value: sexo.last) %>
-  <% end %>
-<% end %>
+  <div class="contenedor ">
+    <div class="img-perfil shadow-box">
+      <img src="../img/foto.jpg" alt="mishi">
+    </div>
+    <div class="objetos shadow-box">
+      <div class="campo">
+        <%= f.label :nombre %>
+        <%= f.text_field :nombre ,class:"js-edit" %>
+      </div>
+      <div class="campo">
+        <%= f.label :user_name,"Nombre de Usuario" %>
+        <%= f.text_field :user_name, autofocus: true  ,class:"js-edit"%>
+      </div>
+      <div class="campo">
+        <%= f.label :email,"Correo electronico" %>
+        <%= f.email_field :email, autofocus: true ,class:"js-edit" %>
+      </div>
+      <div class="campo">
+        <%= f.label :sexo ,"Sexo"%>
+        <%= f.select(:sexo) do %>
+        <% [['Masculino', 0], ['Femenino', 1]].each do |sexo| %>
+        <%= content_tag(:option, sexo.first, value: sexo.last) %>
+        <% end %>
+        <% end %>
 
-  </div>
+      </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
 
-  <div class="field campo">
-    <%= f.label :password,"Contraseña (Dejala en blanco si no la deseas cambiar)" %>
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+      <div class="campo">
+        <%= f.label :password,"Contraseña (Dejala en blanco si no la deseas cambiar)" %>
+        <%= f.password_field :password, autocomplete: "off"  ,class:"js-edit"%>
+      </div>
 
-  <div class="field campo">
-    <%= f.label :password_confirmation, "Confirmar contraseña" %>
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+      <div class="campo">
+        <%= f.label :password_confirmation, "Confirmar contraseña" %>
+        <%= f.password_field :password_confirmation, autocomplete: "off"  ,class:"js-edit"%>
+      </div>
 
-  <div class="field campo">
-    <%= f.label :current_password,"Actual contraseña para confirmar cambios" %>
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
+      <div class="campo">
+        <%= f.label :current_password,"Actual contraseña para confirmar cambios" %>
+        <%= f.password_field :current_password, autocomplete: "off"  ,class:"js-edit"%>
+      </div>
 
-  <div class="actions">
-    <%= f.submit "Actualiza Datos" %>
-  </div>
-<% end %>
+      
+      </div>
+      </div>
+      <div class="actions">
+        <%= f.submit "Editar mis datos" ,class:"shared-link js-edit-btn shadow-box" %>
+      </div>
+      <% end %>
 
-<h3>Cancelar mi cuenta</h3>
+      <div class="cancelar">
+        <h3>Cancelar mi cuenta</h3>
+      
+      <p>Insatisfecho? <%= button_to "Cancelar mi cuenta :(", registration_path(resource_name), data: { confirm: "Estas Seguro?" }, method: :delete ,class:"btn-red"%></p>
 
-<p>Insatisfecho? <%= button_to "Cancelar mi cuenta", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+      <%= link_to "Volver", :back, class:"shared-link" %>
+      </div>
 
-<%= link_to "Volver", :back, class:"shared-link" %>
-
-</div>
+    </div>

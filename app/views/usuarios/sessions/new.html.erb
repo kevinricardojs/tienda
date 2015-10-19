@@ -1,27 +1,29 @@
 <div class="formularios shadow-box">
   <h2>Iniciar Sesión</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
-    <%= f.label :email,"Correo" %>
-    <%= f.email_field :email, autofocus: true, class:"input" %>
-  </div>
+   <%= f.label :email,"Correo" %>
+   <%= f.email_field :email, class:"input" %>
+   <i class="fa fa-envelope"></i>
 
-  <div class="field">
-    <%= f.label :password,"Contraseña" %>
-    <%= f.password_field :password, autocomplete: "off", class:"input" %>
-  </div>
+ </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.label :remember_me,"Recordarme" %>
-      <%= f.check_box :remember_me,checked:"checked" %>
-    </div>
-  <% end -%>
+ <div class="field">
+  <%= f.label :password,"Contraseña" %>
+<%= f.password_field :password, autocomplete: "off", class:"input" %><i class="fa fa-unlock"></i>
+</div>
 
-  <div class="actions">
-    <%= f.submit "Iniciar Sesión" %>
-  </div>
+<% if devise_mapping.rememberable? -%>
+<div class="field">
+  <%= f.label :remember_me,"Recordarme" %>
+  <%= f.check_box :remember_me,checked:"checked" %>
+</div>
+<% end -%>
+
+<div class="actions">
+  <%= f.submit "Iniciar Sesión" %>
+</div>
 <% end %>
 
 <%= render "usuarios/shared/links" %>

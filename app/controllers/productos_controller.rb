@@ -32,11 +32,11 @@ class ProductosController < ApplicationController
   # POST /productos.json
   def create
     @producto = current_usuario.productos.new(producto_params)
-
+    @departamentos = Departamento.all
     respond_to do |format|
       if @producto.save
-        format.html { redirect_to @producto, notice: 'Producto was successfully created.' }
-        format.json { render :show, status: :created, location: @producto }
+        format.html { redirect_to root_path, notice: 'Producto was successfully created.' }
+        format.json { render :new, status: :created, location: @producto }
       else
         format.html { render :new }
         format.json { render json: @producto.errors, status: :unprocessable_entity }

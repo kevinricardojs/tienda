@@ -138,17 +138,14 @@ negro #404040
 	border-radius:5%;
 }
 .actions input{
-		box-shadow: 0px 3px 4px gray;
-	margin-top: 10px;
+	box-shadow: 0px 3px 4px gray;
+	margin: 10px;
 	height: 40px;
-	vertical-align: middle;
 	width: 200px;
 	padding: 10px;
 	background: #113A52;
 	color: white;
 	border: none;
-
-
 }
 @media (max-width: 641px){
 	.formulario{
@@ -297,6 +294,10 @@ negro #404040
 label[for="usuario_remember_me"],label[for="usuario_sexo"]{
 	display: inline-block;
 }
+input[type="file"]{
+	border: none;
+}
+
 label{
 	display: block;
 }
@@ -309,6 +310,7 @@ input,textarea{
 .cuenta{
 	width: 78%;
 	margin-left: 5%;
+	margin-bottom: 10%;
 	background: #EAEAEA;
 	text-align: left;
 	position: absolute;
@@ -333,6 +335,9 @@ input,textarea{
 	width: 100%;
 	height: 100%;
 }
+.objetos-vender{
+	width: 95% !important;
+}
 .objetos{
 	margin-left: 1%;
 	width: 45%;
@@ -347,20 +352,23 @@ input,textarea{
 
 
 }
-.campo label, .campo input, .campo select{
+.campo label, .campo input, .campo select, .campo textarea{
 	position: relative;
 }
 .campo label{
 	top: 0;
 	display: block;
 }
-.campo input, .campo select{
+.campo input, .campo select, .campo textarea{
 	width: 70%;
 	padding-left: 0px;
 	left:7%;
 	top:10%;
 	font-weight: 300;
-	text-decoration: left;
+	text-decoration: none;
+}
+.campo-vender{
+	min-height: 90px;
 }
 .campo{
 	width: 98%;
@@ -403,5 +411,9 @@ input{
 	border-radius: 3px;
 }
 label{
+	padding-top: 5px;
 	font-size: 14px;
+}
+.celeste{
+	color: #00C3B6;
 }

@@ -1,4 +1,5 @@
 
+
 <%= form_for(@producto) do |f| %>
 <% if @producto.errors.any? %>
 <div id="error_explanation">
@@ -11,49 +12,45 @@
   </ul>
 </div>
 <% end %>
-<div class="field">
-  <%=  f.label :nombre%>
-  <%=  f.text_field :nombre%>
-</div>
-<div class="field">
-  <%=  f.label :desc_c , "Descripcion Corta"%>
-  <%=  f.text_field :desc_c%>
-</div><div class="field">
 
-<%=  f.label :desc_l , "Descripcion Larga"%>
-<%=  f.text_area :desc_l %>
-</div>
-<div class="field">
+<div class="shadow-box objetos-vender objetos ">
+  <div class="campo campo-vender">
+    <%=  f.label :nombre%>
+    <%=  f.text_field :nombre%>
+  </div>
+  <div class="campo campo-vender">
+    <%=  f.label :desc_c , "Descripcion Corta"%>
+    <%=  f.text_field :desc_c%>
+  </div>
+  <div class="campo campo-vender">
 
-  <%=  f.label :estado%>
-  <%=  f.text_field :estado%>
-</div>
-<div class="field">
+    <%=  f.label :desc_l , "Descripcion Larga"%>
+    <%=  f.text_area :desc_l %>
+  </div>
+  <div class="campo campo-vender">
 
-  <%=  f.label :precio%>
-  <%=  f.text_field :precio%>
-</div>
-<div class="field">
-  <%= f.label :imagen %>
-  <%= f.file_field :imagen %>
-</div>
+    <%=  f.label :estado%>
+    <%=  f.text_field :estado%>
+  </div>
+  <div class="campo campo-vender">
 
+    <%=  f.label :precio%>
+    <%=  f.text_field :precio%>
+  </div>
+  <div class="campo campo-vender">
+    <%= f.label :imagen %>
+    <%= f.file_field :imagen %>
+  </div>
+  <div class="campo campo-vender relative">
+      <%= f.label :departamento_id ,"Departamento al que pertenece"%>
+      <%= f.select(:departamento_id) do %>
+          <% @departamentos.each do |departamento| %>
+          <%= content_tag(:option, departamento.nombre , value: departamento.id) %>
+           <% end %>
 
-
-<div class="field-c">
-<h4>A que departamento pertenece</h4>
-  <%@departamentos.each do |departamento| %>
-  <div class="categorias">
-  <%= f.radio_button(:departamento_id,departamento.id) %>
-  <%= image_tag departamento.imagen.url(:mini) %>
-  <p ><%= departamento.nombre %></p>
-</div>
-
+  </div>  
   <% end %>
-</div>
-
-
-
+  </div>
 <div class="actions">
   <%= f.submit  "Publicar" %>
 </div>

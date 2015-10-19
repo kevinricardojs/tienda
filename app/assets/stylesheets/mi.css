@@ -22,11 +22,11 @@ a{
 nav{
 	width: 100%;
 	font-weight: 300;
-
+	box-shadow: 0px 6px 16px gray;
 }
 ul{
 	padding-left: 0px;
-	margin-left: 0px;
+	margin: 0px;
 }
 
 li{
@@ -86,7 +86,8 @@ nav a:hover{
 
 		
 	}
-	ul{width: 100%;
+	ul{
+		width: 100%;
 		position: fixed;
 		left: -100%;
 		z-index: 10;
@@ -383,6 +384,24 @@ input,textarea{
 	border-radius:5px;
 	color: white;
 }
-input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus{
-
+.input{
+	border: none;
+	background: none;
+	border-bottom: 2px solid #0097a7;
+	text-align: center;
+	width: 50%;
+	margin-top: 10px;
+	transition-duration: 0.2s;
+	transition-timing-function: linear;
+}
+.input:focus{
+	width: 85%;
+}
+input{
+	border: solid 1px silver;
+	padding: 5px;
+	border-radius: 3px;
+}
+label{
+	font-size: 14px;
 }

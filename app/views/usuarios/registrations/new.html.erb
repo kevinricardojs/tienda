@@ -6,22 +6,22 @@
 
    <div class="field">
     <%= f.label :user_name ,"Nombre de Usuario"%>
-    <%= f.text_field :user_name, autofocus: true, placeholder:"'Pedro' , 'Pablo' , etc.." %>
+    <%= f.text_field :user_name, autofocus: true, placeholder:"'Pedro' , 'Pablo' , etc.." ,class:"input"%>
   </div>
   <div class="field">
     <%= f.label :email %>
-    <%= f.email_field :email, placeholder:"correo@example.com"%>
+    <%= f.email_field :email, placeholder:"correo@example.com",class:"input"%>
   </div>
   
 
   <div class="field">
     <%= f.label :password,  "Contraseña (8 caracteres minimo)" %>
-    <%= f.password_field :password, autocomplete: "off", placeholder:"Contraseña" %>
+    <%= f.password_field :password, autocomplete: "off", placeholder:"Contraseña" ,class:"input"%>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation, "Confirmar Contraseña" %>
-    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"Confirmar Contraseña" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"Confirmar Contraseña" ,class:"input"%>
   </div>
 
   <div class="actions">

@@ -3,13 +3,13 @@
 <%= form_for(@producto) do |f| %>
 <% if @producto.errors.any? %>
 <div id="error_explanation">
-  <h2><%= pluralize(@producto.errors.count, "error") %> prohibited this producto from being saved:</h2>
+  <h5><%= pluralize(@producto.errors.count, "error") %> prohibited this producto from being saved:</h5>
 
-  <ul>
+  
     <% @producto.errors.full_messages.each do |message| %>
-    <li><%= message %></li>
+    <p><%= message %></p>
     <% end %>
-  </ul>
+
 </div>
 <% end %>
 
